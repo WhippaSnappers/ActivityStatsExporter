@@ -7,26 +7,15 @@
 
 import SwiftUI
 import SwiftData
+import HealthKit
 
 @main
 struct Activity_Stats_ExporterApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
-        .modelContainer(sharedModelContainer)
     }
+    
+    
 }

@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AA75DB612B6FF10E00BF1BE5 /* Activity_Stats_ExporterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DB602B6FF10E00BF1BE5 /* Activity_Stats_ExporterApp.swift */; };
-		AA75DB632B6FF10E00BF1BE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DB622B6FF10E00BF1BE5 /* ContentView.swift */; };
-		AA75DB652B6FF10E00BF1BE5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DB642B6FF10E00BF1BE5 /* Item.swift */; };
 		AA75DB672B6FF10F00BF1BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA75DB662B6FF10F00BF1BE5 /* Assets.xcassets */; };
 		AA75DB6A2B6FF10F00BF1BE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA75DB692B6FF10F00BF1BE5 /* Preview Assets.xcassets */; };
 		AA75DB742B6FF11000BF1BE5 /* Activity_Stats_ExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DB732B6FF11000BF1BE5 /* Activity_Stats_ExporterTests.swift */; };
 		AA75DB7E2B6FF11000BF1BE5 /* Activity_Stats_ExporterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DB7D2B6FF11000BF1BE5 /* Activity_Stats_ExporterUITests.swift */; };
 		AA75DB802B6FF11000BF1BE5 /* Activity_Stats_ExporterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75DB7F2B6FF11000BF1BE5 /* Activity_Stats_ExporterUITestsLaunchTests.swift */; };
+		AAC435B32B76A69E00136721 /* StepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC435B22B76A69E00136721 /* StepsModel.swift */; };
+		AAD8D5082B713C5E0067ED31 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD8D5072B713C5E0067ED31 /* MainView.swift */; };
+		AAD8D50A2B727D360067ED31 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD8D5092B727D360067ED31 /* StepsView.swift */; };
+		AAE2BB592B7ECCA7004F291C /* SourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB582B7ECCA7004F291C /* SourcesView.swift */; };
+		AAE2BB5B2B8CA224004F291C /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB5A2B8CA224004F291C /* SourcesModel.swift */; };
+		AAE2BB5E2B8D5AEE004F291C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */; };
+		AAE2BB622B8D5D50004F291C /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB612B8D5D50004F291C /* DateConverter.swift */; };
+		AAE2BB642B8D5D8B004F291C /* HealthKitBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB632B8D5D8B004F291C /* HealthKitBroker.swift */; };
+		AAE2BB662B8D5F9A004F291C /* Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB652B8D5F9A004F291C /* Queries.swift */; };
+		AAE2BB682B8D64EF004F291C /* Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB672B8D64EF004F291C /* Predicates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +45,6 @@
 /* Begin PBXFileReference section */
 		AA75DB5D2B6FF10E00BF1BE5 /* Activity Stats Exporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Activity Stats Exporter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA75DB602B6FF10E00BF1BE5 /* Activity_Stats_ExporterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity_Stats_ExporterApp.swift; sourceTree = "<group>"; };
-		AA75DB622B6FF10E00BF1BE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AA75DB642B6FF10E00BF1BE5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AA75DB662B6FF10F00BF1BE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA75DB692B6FF10F00BF1BE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA75DB6F2B6FF11000BF1BE5 /* Activity Stats ExporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Activity Stats ExporterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +52,18 @@
 		AA75DB792B6FF11000BF1BE5 /* Activity Stats ExporterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Activity Stats ExporterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA75DB7D2B6FF11000BF1BE5 /* Activity_Stats_ExporterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity_Stats_ExporterUITests.swift; sourceTree = "<group>"; };
 		AA75DB7F2B6FF11000BF1BE5 /* Activity_Stats_ExporterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity_Stats_ExporterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA75DB8C2B71262200BF1BE5 /* Activity Stats Exporter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Activity Stats Exporter.entitlements"; sourceTree = "<group>"; };
+		AAC435B22B76A69E00136721 /* StepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsModel.swift; sourceTree = "<group>"; };
+		AAD8D5042B71315A0067ED31 /* Activity-Stats-Exporter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Activity-Stats-Exporter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AAD8D5072B713C5E0067ED31 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AAD8D5092B727D360067ED31 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		AAE2BB582B7ECCA7004F291C /* SourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesView.swift; sourceTree = "<group>"; };
+		AAE2BB5A2B8CA224004F291C /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
+		AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		AAE2BB612B8D5D50004F291C /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		AAE2BB632B8D5D8B004F291C /* HealthKitBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitBroker.swift; sourceTree = "<group>"; };
+		AAE2BB652B8D5F9A004F291C /* Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queries.swift; sourceTree = "<group>"; };
+		AAE2BB672B8D64EF004F291C /* Predicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +114,12 @@
 		AA75DB5F2B6FF10E00BF1BE5 /* Activity Stats Exporter */ = {
 			isa = PBXGroup;
 			children = (
+				AAE2BB602B8D5B7F004F291C /* Models */,
+				AAE2BB5F2B8D5B10004F291C /* Views */,
+				AAE2BB5C2B8D5ADF004F291C /* Util */,
+				AAD8D5042B71315A0067ED31 /* Activity-Stats-Exporter-Info.plist */,
+				AA75DB8C2B71262200BF1BE5 /* Activity Stats Exporter.entitlements */,
 				AA75DB602B6FF10E00BF1BE5 /* Activity_Stats_ExporterApp.swift */,
-				AA75DB622B6FF10E00BF1BE5 /* ContentView.swift */,
-				AA75DB642B6FF10E00BF1BE5 /* Item.swift */,
 				AA75DB662B6FF10F00BF1BE5 /* Assets.xcassets */,
 				AA75DB682B6FF10F00BF1BE5 /* Preview Content */,
 			);
@@ -128,6 +149,37 @@
 				AA75DB7F2B6FF11000BF1BE5 /* Activity_Stats_ExporterUITestsLaunchTests.swift */,
 			);
 			path = "Activity Stats ExporterUITests";
+			sourceTree = "<group>";
+		};
+		AAE2BB5C2B8D5ADF004F291C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */,
+				AAE2BB612B8D5D50004F291C /* DateConverter.swift */,
+				AAE2BB632B8D5D8B004F291C /* HealthKitBroker.swift */,
+				AAE2BB652B8D5F9A004F291C /* Queries.swift */,
+				AAE2BB672B8D64EF004F291C /* Predicates.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AAE2BB5F2B8D5B10004F291C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAD8D5072B713C5E0067ED31 /* MainView.swift */,
+				AAD8D5092B727D360067ED31 /* StepsView.swift */,
+				AAE2BB582B7ECCA7004F291C /* SourcesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AAE2BB602B8D5B7F004F291C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AAC435B22B76A69E00136721 /* StepsModel.swift */,
+				AAE2BB5A2B8CA224004F291C /* SourcesModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +312,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA75DB632B6FF10E00BF1BE5 /* ContentView.swift in Sources */,
-				AA75DB652B6FF10E00BF1BE5 /* Item.swift in Sources */,
+				AAE2BB662B8D5F9A004F291C /* Queries.swift in Sources */,
+				AAE2BB622B8D5D50004F291C /* DateConverter.swift in Sources */,
 				AA75DB612B6FF10E00BF1BE5 /* Activity_Stats_ExporterApp.swift in Sources */,
+				AAE2BB5E2B8D5AEE004F291C /* ErrorHandler.swift in Sources */,
+				AAE2BB682B8D64EF004F291C /* Predicates.swift in Sources */,
+				AAD8D5082B713C5E0067ED31 /* MainView.swift in Sources */,
+				AAE2BB5B2B8CA224004F291C /* SourcesModel.swift in Sources */,
+				AAD8D50A2B727D360067ED31 /* StepsView.swift in Sources */,
+				AAC435B32B76A69E00136721 /* StepsModel.swift in Sources */,
+				AAE2BB642B8D5D8B004F291C /* HealthKitBroker.swift in Sources */,
+				AAE2BB592B7ECCA7004F291C /* SourcesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -408,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -423,17 +483,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Activity Stats Exporter/Activity Stats Exporter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Activity Stats Exporter/Preview Content\"";
 				DEVELOPMENT_TEAM = A9B29N7D5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Activity-Stats-Exporter-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health data is needed in order to fetch steps";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This is needed to alter the number of steps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +507,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pcherevach.Activity-Stats-Exporter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,17 +522,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Activity Stats Exporter/Activity Stats Exporter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Activity Stats Exporter/Preview Content\"";
 				DEVELOPMENT_TEAM = A9B29N7D5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Activity-Stats-Exporter-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Health data is needed in order to fetch steps";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This is needed to alter the number of steps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +546,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pcherevach.Activity-Stats-Exporter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
