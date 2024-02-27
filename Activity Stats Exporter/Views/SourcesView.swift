@@ -11,19 +11,18 @@ import HealthKit
 struct SourcesView: View {
     @State private var model: SourcesModel
     @State var sourceSelected: HKSource? = nil
-    @State private var isAwaiting: Bool = false // Change to true
-    @State private var noStepsData: Bool = false
     private let datesPicked: [Date]
+    private let hkStore: HKHealthStore
     
     var body: some View {
         VStack {
-            if isAwaiting {
+            if model.isAwaiting {
                 ProgressView().progressViewStyle(.circular)
             }
-            if noStepsData {
+            if model.noStepsData && !model.isAwaiting {
                 Text("No steps data for selected dates")
             }
-            if !isAwaiting && !noStepsData {
+            if !model.isAwaiting && !model.noStepsData {
                 Text("Select the source for steps")
                 Picker("", selection: $sourceSelected) {
                     ForEach(model.sources, id: \.self) { source in
@@ -37,7 +36,7 @@ struct SourcesView: View {
         }
     }
     
-    init(_ datesPicked: [Date]) {
+    init(for datesPicked: [Date], store hkStore:HKHealthStore) {
         self.datesPicked = datesPicked
         model = SourcesModel(datesPicked)
     }

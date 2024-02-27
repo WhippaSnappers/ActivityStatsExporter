@@ -154,11 +154,9 @@
 		AAE2BB5C2B8D5ADF004F291C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AAE2BB6B2B8E1256004F291C /* HealthKit */,
 				AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */,
 				AAE2BB612B8D5D50004F291C /* DateConverter.swift */,
-				AAE2BB632B8D5D8B004F291C /* HKBroker.swift */,
-				AAE2BB652B8D5F9A004F291C /* Queries.swift */,
-				AAE2BB672B8D64EF004F291C /* Predicates.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -180,6 +178,16 @@
 				AAE2BB5A2B8CA224004F291C /* SourcesModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AAE2BB6B2B8E1256004F291C /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2BB632B8D5D8B004F291C /* HKBroker.swift */,
+				AAE2BB652B8D5F9A004F291C /* Queries.swift */,
+				AAE2BB672B8D64EF004F291C /* Predicates.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +265,6 @@
 					};
 					AA75DB782B6FF11000BF1BE5 = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = AA75DB5C2B6FF10E00BF1BE5;
 					};
 				};
 			};
@@ -497,8 +504,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,8 +542,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,10 +612,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pcherevach.Activity-Stats-ExporterUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Activity Stats Exporter";
 			};
 			name = Debug;
 		};
@@ -625,10 +630,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pcherevach.Activity-Stats-ExporterUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Activity Stats Exporter";
 			};
 			name = Release;
 		};

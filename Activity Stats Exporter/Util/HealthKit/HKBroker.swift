@@ -9,16 +9,11 @@ import Foundation
 import HealthKit
 
 // Helps to communicate with the HealthKit framework
-class HKBroker {
-    let healthStore = HKHealthStore()
-    private let requiredTypes: Set = [
-        HKQuantityType(.stepCount)
-    ]
-    
-    func requestAuthorisation() async throws {
+enum HKBroker {
+    static func requestAuthorisation(for store: HKHealthStore) async throws {
         if HKHealthStore.isHealthDataAvailable() {
             do {
-                try await healthStore.requestAuthorization(toShare: Set<HKQuantityType>(), read: requiredTypes)
+                try await store.requestAuthorization(toShare: Set<HKQuantityType>(), read: Set<HKQuantityType>([HKQuantityType(.stepCount)]))
             } catch {
                 throw ErrorDescriptor(severity: .critical, message: "HealthKit authorisation failed")
             }

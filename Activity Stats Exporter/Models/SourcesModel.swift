@@ -11,6 +11,8 @@ import HealthKit
 @Observable class SourcesModel {
     private let datesPicked: [Date]
     var sources: [HKSource] = []
+    var isAwaiting: Bool = false
+    var noStepsData: Bool { sources.isEmpty }
     
     init(_ datesPicked: [Date]) {
         self.datesPicked = datesPicked

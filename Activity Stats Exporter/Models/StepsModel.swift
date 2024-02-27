@@ -11,7 +11,6 @@ import os
 
 // Main VM
 @Observable final class StepsModel {
-    private let healthKitBroker = HKBroker()
     private let dates: [Date]
     private let errorHandler = ErrorHandler()
     private var healthKitAvailableAndAuthorised: Bool = false
@@ -19,13 +18,6 @@ import os
     
     init(_ dates: [Date]) {
         self.dates = dates
-        Task(priority: .medium) {
-            do {
-                try await healthKitBroker.requestAuthorisation()
-            } catch let error as ErrorDescriptor {
-                errorHandler.handle(error)
-            }
-        }
     }
     
     func populateStepsSamples() async throws {

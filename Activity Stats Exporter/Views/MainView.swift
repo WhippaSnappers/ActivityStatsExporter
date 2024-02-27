@@ -6,21 +6,29 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct MainView: View {
     @State private var datesPicked: Set<DateComponents> = []
+    @State private var hkStore = HKHealthStore()
     let dateRangeToToday = ..<Date()
     
     var body: some View {
         NavigationStack {
             Text("Pick the dates").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            MultiDatePicker(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, selection: $datesPicked, in: dateRangeToToday)
-            NavigationLink(destination: SourcesView(DateConverter.extractDates(from: datesPicked))) {
+            MultiDatePicker("", selection: $datesPicked, in: dateRangeToToday)
+            NavigationLink(destination: SourcesView(for: DateConverter.extractDates(from: datesPicked)), store: hkStore) {
                 Text("Fetch steps")
-            }.buttonStyle(.borderedProminent).disabled(true)
+            }.buttonStyle(.borderedProminent).disabled(datesPicked.isEmpty)
             Button("Reset calendar") {
             action: do { datesPicked.removeAll() }
             }.buttonStyle(.borderedProminent).tint(.red)
+        }.task {
+            do {
+                try await HKBroker.requestAuthorisation(for: hkStore)
+            } catch {
+                
+            }
         }
     }
 }
