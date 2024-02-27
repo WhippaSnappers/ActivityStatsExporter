@@ -12,7 +12,6 @@ struct StepsView: View {
     
     var body: some View {
         VStack {
-            
             List(stepsModel.stepsSamples) { stepsSample in
                 Text(stepsSample.toText())
             }.task {
@@ -26,11 +25,11 @@ struct StepsView: View {
         }
     }
     
-    init(datesPicked: Set<DateComponents>) {
-        self.stepsModel = StepsModel(using: datesPicked)
+    init(_ datesPicked: [Date]) {
+        self.stepsModel = StepsModel(datesPicked)
     }
 }
 
 #Preview {
-    StepsView(datesPicked: [])
+    StepsView([])
 }

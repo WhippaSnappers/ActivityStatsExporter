@@ -6,7 +6,17 @@
 //
 
 import Foundation
+import HealthKit
 
 @Observable class SourcesModel {
+    private let datesPicked: [Date]
+    var sources: [HKSource] = []
     
+    init(_ datesPicked: [Date]) {
+        self.datesPicked = datesPicked
+    }
+    
+    private func populateSources() {
+        
+    }
 }

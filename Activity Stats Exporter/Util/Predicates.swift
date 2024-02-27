@@ -8,10 +8,10 @@
 import Foundation
 import HealthKit
 
-struct Predicator {
+enum PredicateCrafter {
     static func craftHKStepsPredicate(start startDate: Date, end endDate: Date) -> HKSamplePredicate<HKQuantitySample> {
         let stepsType = HKQuantityType(.stepCount)
-        let dayPredicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
-        return HKSamplePredicate.quantitySample(type: stepsType, predicate: dayPredicate)
+        let rangePredicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
+        return HKSamplePredicate.quantitySample(type: stepsType, predicate: rangePredicate)
     }
 }

@@ -16,4 +16,12 @@ enum DateConverter {
     static func end(of date: Date) -> Date {
         return Calendar.current.date(byAdding: .day, value: 1, to: start(of: date))!
     }
+    
+    static func extractDates(from dateComponents: Set<DateComponents>) -> [Date] {
+        var extractedDates: [Date] = []
+        for dateComponent in dateComponents {
+            extractedDates.append(dateComponent.date!)
+        }
+        return extractedDates
+    }
 }

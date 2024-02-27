@@ -15,12 +15,9 @@ struct MainView: View {
         NavigationStack {
             Text("Pick the dates").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             MultiDatePicker(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, selection: $datesPicked, in: dateRangeToToday)
-            NavigationLink(destination: SourcesView()) {
-                Text("WIP")
-            }.buttonStyle(.borderedProminent).disabled(true)
-            NavigationLink(destination: StepsView(datesPicked: datesPicked)) {
+            NavigationLink(destination: SourcesView(DateConverter.extractDates(from: datesPicked))) {
                 Text("Fetch steps")
-            }.buttonStyle(.borderedProminent).disabled(datesPicked.isEmpty)
+            }.buttonStyle(.borderedProminent).disabled(true)
             Button("Reset calendar") {
             action: do { datesPicked.removeAll() }
             }.buttonStyle(.borderedProminent).tint(.red)
