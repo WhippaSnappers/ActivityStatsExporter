@@ -1,5 +1,5 @@
 //
-//  HealthKitBroker.swift
+//  HKBroker.swift
 //  Activity Stats Exporter
 //
 //  Created by Paul Cherevach on 27.02.2024.
@@ -9,9 +9,9 @@ import Foundation
 import HealthKit
 
 // Helps to communicate with the HealthKit framework
-class HealthKitBroker {
-    let healthStore: HKHealthStore = HKHealthStore()
-    let requiredTypes: Set = [
+class HKBroker {
+    let healthStore = HKHealthStore()
+    private let requiredTypes: Set = [
         HKQuantityType(.stepCount)
     ]
     

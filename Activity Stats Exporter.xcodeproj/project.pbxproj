@@ -20,7 +20,7 @@
 		AAE2BB5B2B8CA224004F291C /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB5A2B8CA224004F291C /* SourcesModel.swift */; };
 		AAE2BB5E2B8D5AEE004F291C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */; };
 		AAE2BB622B8D5D50004F291C /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB612B8D5D50004F291C /* DateConverter.swift */; };
-		AAE2BB642B8D5D8B004F291C /* HealthKitBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB632B8D5D8B004F291C /* HealthKitBroker.swift */; };
+		AAE2BB642B8D5D8B004F291C /* HKBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB632B8D5D8B004F291C /* HKBroker.swift */; };
 		AAE2BB662B8D5F9A004F291C /* Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB652B8D5F9A004F291C /* Queries.swift */; };
 		AAE2BB682B8D64EF004F291C /* Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2BB672B8D64EF004F291C /* Predicates.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,7 @@
 		AAE2BB5A2B8CA224004F291C /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
 		AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		AAE2BB612B8D5D50004F291C /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
-		AAE2BB632B8D5D8B004F291C /* HealthKitBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitBroker.swift; sourceTree = "<group>"; };
+		AAE2BB632B8D5D8B004F291C /* HKBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBroker.swift; sourceTree = "<group>"; };
 		AAE2BB652B8D5F9A004F291C /* Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queries.swift; sourceTree = "<group>"; };
 		AAE2BB672B8D64EF004F291C /* Predicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,7 @@
 			children = (
 				AAE2BB5D2B8D5AEE004F291C /* ErrorHandler.swift */,
 				AAE2BB612B8D5D50004F291C /* DateConverter.swift */,
-				AAE2BB632B8D5D8B004F291C /* HealthKitBroker.swift */,
+				AAE2BB632B8D5D8B004F291C /* HKBroker.swift */,
 				AAE2BB652B8D5F9A004F291C /* Queries.swift */,
 				AAE2BB672B8D64EF004F291C /* Predicates.swift */,
 			);
@@ -321,7 +321,7 @@
 				AAE2BB5B2B8CA224004F291C /* SourcesModel.swift in Sources */,
 				AAD8D50A2B727D360067ED31 /* StepsView.swift in Sources */,
 				AAC435B32B76A69E00136721 /* StepsModel.swift in Sources */,
-				AAE2BB642B8D5D8B004F291C /* HealthKitBroker.swift in Sources */,
+				AAE2BB642B8D5D8B004F291C /* HKBroker.swift in Sources */,
 				AAE2BB592B7ECCA7004F291C /* SourcesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

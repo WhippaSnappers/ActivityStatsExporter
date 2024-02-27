@@ -8,27 +8,26 @@
 import Foundation
 import HealthKit
 
-// Uses HKStatisticsQuery to query HealthKit store for steps
-struct HealthKitStepsQuery {
-    private let predicate: HKSamplePredicate<HKQuantitySample>
-    private let query: HKStatisticsQueryDescriptor
-    
-    init(using predicate: HKSamplePredicate<HKQuantitySample>) {
-        self.predicate = predicate
-        query = HKStatisticsQueryDescriptor(predicate: predicate, options: .cumulativeSum)
+struct Querier {
+    static func craftHKStepsQuery(using predicate: HKSamplePredicate<HKQuantitySample>) -> HKStatisticsQueryDescriptor {
+        return HKStatisticsQueryDescriptor(predicate: predicate, options: .cumulativeSum)
     }
     
-    func execute(using broker: HealthKitBroker) async throws -> Double {
+    static func execute(this query: HKStatisticsQueryDescriptor, against store: HKHealthStore) async throws -> Double {
         do {
-            let test = try await query.result(for: broker.healthStore)
-            let result = try await query.result(for: broker.healthStore)?.sumQuantity()?.doubleValue(for: HKUnit.count())
+            let result = try await query.result(for: store)?.sumQuantity()?.doubleValue(for: HKUnit.count())
             return result!
         } catch {
             throw ErrorDescriptor(severity: .critical, message: "HealthKit StatisticsQuery execution failed")
         }
     }
-}
-
-struct HealthKitSourcesQuery {
     
+    static func execute(this query: HKSourceQueryDescriptor<HKQuantitySample>, against store: HKHealthStore) async throws -> [HKSource] {
+        do {
+            let result = try await query.result(for: store)
+            return result
+        } catch {
+            throw ErrorDescriptor(severity: .critical, message: "HealthKit SourceQuery execution failed")
+        }
+    }
 }

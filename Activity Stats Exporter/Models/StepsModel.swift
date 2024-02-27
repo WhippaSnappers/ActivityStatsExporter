@@ -11,7 +11,7 @@ import os
 
 // Main VM
 @Observable final class StepsModel {
-    private let healthKitBroker = HealthKitBroker()
+    private let healthKitBroker = HKBroker()
     private let dates: Set<DateComponents>
     private let errorHandler = ErrorHandler()
     private var healthKitAvailableAndAuthorised: Bool = false
