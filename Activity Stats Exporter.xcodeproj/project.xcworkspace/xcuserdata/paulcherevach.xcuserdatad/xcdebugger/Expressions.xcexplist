@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SourcesModel.populateSources():SourcesModel.swift">
+      </ContextState>
+      <ContextState
          contextName = "static HealthKitHelper.querySteps(for:from:):StepsModel.swift">
          <PersistentStrings>
             <PersistentString

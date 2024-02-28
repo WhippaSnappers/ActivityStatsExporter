@@ -12,7 +12,6 @@ import os
 // Main VM
 @Observable final class StepsModel {
     private let dates: [Date]
-    private let errorHandler = ErrorHandler()
     private var healthKitAvailableAndAuthorised: Bool = false
     var stepsSamples: [StepsSample] = []
     
@@ -59,27 +58,4 @@ struct StepsSample : Identifiable {
         dateFormatter.dateStyle = .short
         return dateFormatter.string(from: date) + " " + String(count)
     }
-}
-
-struct test {
-    static func query(_ store: HKHealthStore) async {
-        let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let timePredicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: [])
-        let stepsType = HKQuantityType(.stepCount)
-        let samplePredicate = HKSamplePredicate.quantitySample(type: stepsType, predicate: timePredicate)
-        let sourceQuery = HKSourceQueryDescriptor(predicate: samplePredicate)
-    
-        //let query1 = HKStatisticsQueryDescriptor(predicate: samplePredicate, options: .cumulativeSum)
-        
-        
-        do {
-            var result = try await sourceQuery.result(for: store)
-            print("good")
-        }
-        catch {
-            print("fuck")
-        }
-    }
-                    
 }

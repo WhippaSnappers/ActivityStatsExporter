@@ -12,7 +12,6 @@ struct SourcesView: View {
     @State private var model: SourcesModel
     @State var sourceSelected: HKSource? = nil
     private let datesPicked: [Date]
-    private let hkStore: HKHealthStore
     
     var body: some View {
         VStack {
@@ -25,7 +24,7 @@ struct SourcesView: View {
             if !model.isAwaiting && !model.noStepsData {
                 Text("Select the source for steps")
                 Picker("", selection: $sourceSelected) {
-                    ForEach(model.sources, id: \.self) { source in
+                    ForEach(Array(model.sources).sorted { $0.name < $1.name }, id: \.self) { source in
                         Text(source.name)
                     }
                 }.pickerStyle(.wheel)
@@ -33,10 +32,12 @@ struct SourcesView: View {
                     Text("Fetch steps")
                 }.buttonStyle(.borderedProminent)
             }
+        }.task {
+            await model.populateSources()
         }
     }
     
-    init(for datesPicked: [Date], store hkStore:HKHealthStore) {
+    init(_ datesPicked: [Date]) {
         self.datesPicked = datesPicked
         model = SourcesModel(datesPicked)
     }

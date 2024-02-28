@@ -9,10 +9,9 @@ import Foundation
 import OSLog
 
 // Handles custom Errors
-struct ErrorHandler {
-    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Execution flow")
-    
-    func handle(_ error: ErrorDescriptor) {
+enum ErrorHandler {
+    static func handle(_ error: ErrorDescriptor) {
+        let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Execution flow")
         switch error.severity {
         case .warning:
             logger.log("\(error.message)")
@@ -22,7 +21,8 @@ struct ErrorHandler {
         }
     }
     
-    func handle(_ error: Error) {
+    static func handle(_ error: Error) {
+        let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Execution flow")
         logger.log("\(error.localizedDescription)")
         fatalError()
     }

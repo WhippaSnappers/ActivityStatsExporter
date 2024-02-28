@@ -222,5 +222,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDCB60DE-631E-4E61-AD81-F89549564F36"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activity Stats Exporter/Models/SourcesModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "populateSources()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DDCB60DE-631E-4E61-AD81-F89549564F36 - b582149d6bdc7818"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Activity_Stats_Exporter.SourcesModel.populateSources() async -&gt; ()"
+                  moduleName = "Activity Stats Exporter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/Models/SourcesModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "DDCB60DE-631E-4E61-AD81-F89549564F36 - 89855afea7798e31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Activity_Stats_Exporter.SourcesModel.populateSources() async -&gt; ()"
+                  moduleName = "Activity Stats Exporter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/Models/SourcesModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

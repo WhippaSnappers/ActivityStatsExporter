@@ -10,14 +10,13 @@ import HealthKit
 
 struct MainView: View {
     @State private var datesPicked: Set<DateComponents> = []
-    @State private var hkStore = HKHealthStore()
     let dateRangeToToday = ..<Date()
     
     var body: some View {
         NavigationStack {
             Text("Pick the dates").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             MultiDatePicker("", selection: $datesPicked, in: dateRangeToToday)
-            NavigationLink(destination: SourcesView(for: DateConverter.extractDates(from: datesPicked)), store: hkStore) {
+            NavigationLink(destination: SourcesView(DateConverter.extractDates(from: datesPicked))) {
                 Text("Fetch steps")
             }.buttonStyle(.borderedProminent).disabled(datesPicked.isEmpty)
             Button("Reset calendar") {
@@ -25,7 +24,7 @@ struct MainView: View {
             }.buttonStyle(.borderedProminent).tint(.red)
         }.task {
             do {
-                try await HKBroker.requestAuthorisation(for: hkStore)
+                try await HKBroker.requestAuthorisation(for: HKHealthStore())
             } catch {
                 
             }
