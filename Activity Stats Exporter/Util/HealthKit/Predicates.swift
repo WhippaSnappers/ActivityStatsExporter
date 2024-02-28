@@ -9,9 +9,15 @@ import Foundation
 import HealthKit
 
 enum PredicateCrafter {
-    static func craftHKStepsPredicate(start startDate: Date, end endDate: Date) -> HKSamplePredicate<HKQuantitySample> {
-        let stepsType = HKQuantityType(.stepCount)
+    static func craftSimpleHKStepsPredicate(start startDate: Date, end endDate: Date) -> HKSamplePredicate<HKQuantitySample> {
         let rangePredicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
-        return HKSamplePredicate.quantitySample(type: stepsType, predicate: rangePredicate)
+        return HKSamplePredicate.quantitySample(type: HKQuantityType(.stepCount), predicate: rangePredicate)
+    }
+    
+    static func craftCompoundHKStepsPredicate(start startDate: Date, end endDate: Date, from source: HKSource) -> HKSamplePredicate<HKQuantitySample> {
+        let rangePredicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
+        let sourcePredicate = HKQuery.predicateForObjects(from: source)
+        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [rangePredicate, sourcePredicate])
+        return HKSamplePredicate.quantitySample(type: HKQuantityType(.stepCount), predicate: compoundPredicate)
     }
 }

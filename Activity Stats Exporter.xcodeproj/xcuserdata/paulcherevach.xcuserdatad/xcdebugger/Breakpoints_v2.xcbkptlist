@@ -7,267 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73CF8FDF-4F6F-47E0-BE78-E3FAC9F5DD3D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activity Stats Exporter/StepsModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "execute(using:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activity Stats Exporter/StepsModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "execute(using:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - c7ca953c6293b513"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "460">
-               </Location>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - c7ca953c6293b513"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - 54c32b64d7b5a389"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - 56b1f6bfe3bcf372"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - 56b1f6bfe3bcf311"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - e174d6396059317c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "86314E5C-ACB5-4032-BDC0-7C1D1DAE9F7B - e174d6396059311f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for Activity_Stats_Exporter.HealthKitStepsQuery.execute(using: Activity_Stats_Exporter.HealthKitBroker) async throws -&gt; Swift.Double"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "108">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5849E336-A960-4FBC-B04C-E5F806C7FCE8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activity Stats Exporter/StepsModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "toText()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF9F1C8D-0599-444C-B0E6-A3BF1044D5FF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Activity Stats Exporter/StepsModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "query(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DF9F1C8D-0599-444C-B0E6-A3BF1044D5FF - f0dc0c7b174ad0ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for static Activity_Stats_Exporter.test.query(__C.HKHealthStore) async -&gt; ()"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "182"
-                  endingLineNumber = "182"
-                  offsetFromSymbolStart = "140">
-               </Location>
-               <Location
-                  uuid = "DF9F1C8D-0599-444C-B0E6-A3BF1044D5FF - f0dc0c7b174ad08b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for static Activity_Stats_Exporter.test.query(__C.HKHealthStore) async -&gt; ()"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "185"
-                  endingLineNumber = "185"
-                  offsetFromSymbolStart = "140">
-               </Location>
-               <Location
-                  uuid = "DF9F1C8D-0599-444C-B0E6-A3BF1044D5FF - f0dc0c7b174ad373"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for static Activity_Stats_Exporter.test.query(__C.HKHealthStore) async -&gt; ()"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/StepsModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "140">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DDCB60DE-631E-4E61-AD81-F89549564F36"
+            uuid = "216A546A-3329-4470-AB26-41394F329CCD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Activity Stats Exporter/Models/SourcesModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "populateSources()"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DDCB60DE-631E-4E61-AD81-F89549564F36 - b582149d6bdc7818"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Activity_Stats_Exporter.SourcesModel.populateSources() async -&gt; ()"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/Models/SourcesModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "DDCB60DE-631E-4E61-AD81-F89549564F36 - 89855afea7798e31"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Activity_Stats_Exporter.SourcesModel.populateSources() async -&gt; ()"
-                  moduleName = "Activity Stats Exporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulcherevach/Xcode%20Projects/Activity%20Stats%20Exporter/Activity%20Stats%20Exporter/Models/SourcesModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34CF1390-B539-437C-AA2B-36C9AAAC2EE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activity Stats Exporter/Views/SourcesView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

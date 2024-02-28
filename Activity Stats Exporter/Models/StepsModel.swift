@@ -12,50 +12,43 @@ import os
 // Main VM
 @Observable final class StepsModel {
     private let dates: [Date]
+    private let source: HKSource
     private var healthKitAvailableAndAuthorised: Bool = false
-    var stepsSamples: [StepsSample] = []
+    private var stepsSamples: [StepsSample] = []
+    var stepsSamplesSorted: [StepsSample] { stepsSamples.sorted { $0.date < $1.date } }
     
-    init(_ dates: [Date]) {
-        self.dates = dates
+    init(datesPicked: [Date], source: HKSource) {
+        dates = datesPicked
+        self.source = source
     }
     
-    func populateStepsSamples() async throws {
-        var id = 0
+    func populateStepsSamples() async {
         for date in dates {
-//            await test.query(healthKitBroker.healthStore)
-//            let start = DateConverter.start(of: date.date!)
-//            let end = DateConverter.end(of: date.date!)
-//            let stepsPredicate = HealthKitStepsPredicate(start: start, end: end)
-//            let stepsQuery = HealthKitStepsQuery(using: stepsPredicate.get)
-//            let stepsCount: Double?
-//            do {
-//                stepsCount = try await stepsQuery.execute(using: healthKitBroker)
-//                stepsSamples.append(StepsSample(id: id, date: date.date!, count: Int(stepsCount!)))
-//                id += 1
-//            } catch let error as ErrorDescriptor {
-//                errorHandler.handle(error)
-//            }
+            var steps = await queryForSteps(on: date)
+            stepsSamples.append(StepsSample(date: date, count: Int(steps)))
+        }
+    }
+    
+    private func queryForSteps(on date: Date) async -> Double {
+        let predicate = PredicateCrafter.craftCompoundHKStepsPredicate(start: DateConverter.start(of: date), end: DateConverter.end(of: date), from: source)
+        let query = QueryCrafter.craftHKStepsQuery(using: predicate)
+        do {
+            return try await QueryExecutor.execute(this: query, against: HKHealthStore())
+        } catch {
+            ErrorHandler.handle(error)
+            return -1
         }
     }
 }
 
-struct HealthKitSourcesPredicate {
-    
-}
-
-struct HealhKitSourcesQuery {
-    
-}
-
 // Models a StepSample that SwiftUI renders within a List
-struct StepsSample : Identifiable {
-    let id: Int
+struct StepsSample : Hashable {
     let date: Date
     let count: Int
     
     func toText() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        return dateFormatter.string(from: date) + " " + String(count)
+        return "\(dateFormatter.string(from: date)) \(String(count))"
     }
 }

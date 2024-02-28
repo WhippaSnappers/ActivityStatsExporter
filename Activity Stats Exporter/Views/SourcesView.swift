@@ -10,7 +10,7 @@ import HealthKit
 
 struct SourcesView: View {
     @State private var model: SourcesModel
-    @State var sourceSelected: HKSource? = nil
+    @State var sourceSelected: HKSource = HKSource.default()
     private let datesPicked: [Date]
     
     var body: some View {
@@ -24,16 +24,17 @@ struct SourcesView: View {
             if !model.isAwaiting && !model.noStepsData {
                 Text("Select the source for steps")
                 Picker("", selection: $sourceSelected) {
-                    ForEach(Array(model.sources).sorted { $0.name < $1.name }, id: \.self) { source in
+                    ForEach(model.sourcesSorted, id: \.self) { source in
                         Text(source.name)
                     }
                 }.pickerStyle(.wheel)
-                NavigationLink(destination: StepsView(datesPicked)) {
+                NavigationLink(destination: StepsView(datesPicked: datesPicked, source: sourceSelected)) {
                     Text("Fetch steps")
                 }.buttonStyle(.borderedProminent)
             }
         }.task {
             await model.populateSources()
+            sourceSelected = model.sourcesSorted[0]
         }
     }
     

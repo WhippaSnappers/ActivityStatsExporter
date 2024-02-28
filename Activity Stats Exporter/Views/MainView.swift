@@ -10,12 +10,12 @@ import HealthKit
 
 struct MainView: View {
     @State private var datesPicked: Set<DateComponents> = []
-    let dateRangeToToday = ..<Date()
+    @State private var alertShown: Bool = false
     
     var body: some View {
         NavigationStack {
             Text("Pick the dates").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            MultiDatePicker("", selection: $datesPicked, in: dateRangeToToday)
+            MultiDatePicker("", selection: $datesPicked, in: ..<Date())
             NavigationLink(destination: SourcesView(DateConverter.extractDates(from: datesPicked))) {
                 Text("Fetch steps")
             }.buttonStyle(.borderedProminent).disabled(datesPicked.isEmpty)
@@ -26,9 +26,9 @@ struct MainView: View {
             do {
                 try await HKBroker.requestAuthorisation(for: HKHealthStore())
             } catch {
-                
+                alertShown = true
             }
-        }
+        }.alert("HealthKit authorisation failed", isPresented: $alertShown) { }
     }
 }
 

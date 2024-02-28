@@ -6,30 +6,26 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct StepsView: View {
     @State private var stepsModel: StepsModel
     
     var body: some View {
         VStack {
-            List(stepsModel.stepsSamples) { stepsSample in
+            List(stepsModel.stepsSamplesSorted, id: \.self) { stepsSample in
                 Text(stepsSample.toText())
             }.task {
-                do {
-                    try await stepsModel.populateStepsSamples()
-                } catch {
-                    
-                }
+                await stepsModel.populateStepsSamples()
             }
-            
         }
     }
     
-    init(_ datesPicked: [Date]) {
-        self.stepsModel = StepsModel(datesPicked)
+    init(datesPicked: [Date]?, source: HKSource?) {
+        self.stepsModel = StepsModel(datesPicked: datesPicked!, source: source!)
     }
 }
 
 #Preview {
-    StepsView([])
+    StepsView(datesPicked: nil, source: nil)
 }

@@ -22,7 +22,7 @@ enum QueryExecutor {
     static func execute(this query: HKStatisticsQueryDescriptor, against store: HKHealthStore) async throws -> Double {
         do {
             let result = try await query.result(for: store)?.sumQuantity()?.doubleValue(for: HKUnit.count())
-            return result!
+            return result ?? 0
         } catch {
             throw ErrorDescriptor(severity: .critical, message: "HealthKit StatisticsQuery execution failed")
         }
